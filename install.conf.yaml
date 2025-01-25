@@ -6,7 +6,6 @@
 - create:
   - ~/.config
   - ~/bin
-  - ~/.config/gh
 
 - clean: ['~', '~/.config']
 
@@ -17,9 +16,10 @@
     ~/.config/:
       glob: true
       path: config/*
-      exclude: [ gh ]
+      exclude: [ config/gh ]
     ~/.config/gh/:
       glob: true
+      create: false
       path: config/gh/*
     ~/.profile: sh/profile
     ~/.bashrc: bash/bashrc
@@ -28,5 +28,6 @@
     ~/.bash_logout: bash/bash_logout
     ~/.gitconfig: git/gitconfig
     ~/.gitignore: git/gitignore
+    ~/.Brewfile: Brewfile
 
 - shell: []
