@@ -1,0 +1,10 @@
+#!/bin/bash
+
+export TZ=UTC
+time=$(git log -1 --date=iso8601 --pretty=format:%cd)
+
+if [[ $1 = "-t" ]]; then
+  echo $time | sed -E 's/([ :]| -)/-/g'
+else
+  echo $time
+fi

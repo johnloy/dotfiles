@@ -1,0 +1,14 @@
+#!/bin/bash
+
+dir=${1:-./}
+gitignore_file=$(cd "$dir" && git rev-parse --show-toplevel)/.gitignore
+for f in $(git status --porcelain "$dir" | grep '^??' | sed 's/^?? //'); do
+    if [ -L "$f" ]; then
+        echo "$f" >>"$gitignore_file"
+        echo "added ${f} to .gitignore"
+    fi
+    if [ -d "$f" ]; then
+        echo "$f"\* >>"$gitignore_file"
+        echo "added ${f}* to .gitignore"
+    fi
+done

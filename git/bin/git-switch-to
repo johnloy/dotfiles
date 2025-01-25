@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Git Switch With Changes (Staged and Unstaged, but not Untracked)
+
+BranchName=$1
+
+if [ ! -z "$BranchName" ]
+then
+	if [ $(git branch -l | grep $BranchName) ]
+	then
+  		git stash
+  		git switch $BranchName
+  		git stash pop
+	else
+		git stash
+		git switch -c $BranchName
+		git stash pop
+	fi
+else
+  echo "Branch name is not specified"
+fi

@@ -1,0 +1,109 @@
+# OSX
+# From: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
+# ------------------------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Vim
+# From: https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
+# ------------------------------------------------------------------------------
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# Archive formats
+# It's better to unpack these files and commit the raw source because
+# git has its own built in compression methods.
+# From: https://github.com/github/gitignore/blob/master/Global/Archives.gitignore
+# ------------------------------------------------------------------------------
+*.7z
+*.jar
+*.rar
+*.zip
+*.gz
+*.bzip
+*.bz2
+*.xz
+*.lzma
+*.cab
+
+#packing-only formats
+*.iso
+*.tar
+
+#package management formats
+*.dmg
+*.xpi
+*.gem
+*.egg
+*.deb
+*.rpm
+*.msi
+*.msm
+*.msp
+
+# GPG
+# From: https://github.com/github/gitignore/blob/master/Global/GPG.gitignore
+# ------------------------------------------------------------------------------
+secring.*
+
+# LibreOffice locks
+# From: https://github.com/github/gitignore/blob/master/Global/LibreOffice.gitignore
+# ------------------------------------------------------------------------------
+.~lock.*#
+
+# tags
+# Ignore tags created by etags, ctags, gtags (GNU global) and cscope
+# From: https://github.com/github/gitignore/blob/master/Global/Tags.gitignore
+# ------------------------------------------------------------------------------
+TAGS
+.TAGS
+!TAGS/
+tags
+.tags
+!tags/
+gtags.files
+GTAGS
+GRTAGS
+GPATH
+cscope.files
+cscope.out
+cscope.in.out
+cscope.po.out
+
+# # virtualenv
+# # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+# # From: https://github.com/github/gitignore/blob/master/Global/VirtualEnv.gitignore
+# # ------------------------------------------------------------------------------
+# .Python
+# [Bb]in
+# [Ii]nclude
+# [Ll]ib
+# [Ll]ocal
+# [Ss]cripts
+# pyvenv.cfg
+# pip-selfcheck.json
+
+.notes

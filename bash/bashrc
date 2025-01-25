@@ -1,0 +1,26 @@
+# Common interactive profile for bash, zsh, ksh, and other bourne-derived shells
+[ -e ~/.profile ] && source ~/.profile
+
+source "${DOTFILES_DIR}/bash/env.sh"
+source "${DOTFILES_DIR}/bash/functions.sh"
+source "${DOTFILES_DIR}/bash/aliases.sh"
+source "${DOTFILES_DIR}/bash/completions.sh"
+# source_many
+# source_many ~/.secrets/*.sh
+# source_many ~/bash/functions/*.sh
+# source_many ~/bash/aliases/*.sh
+# source_many ~/bash/interactive/*.sh
+
+# Completions
+# source_many ~/bash/completions/*.sh
+
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+[ -s ~/.bashrc_local ] && source ~/.bashrc_local
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+

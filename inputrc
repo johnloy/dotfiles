@@ -1,0 +1,26 @@
+# Colorizes common prefix in all tab-completion matches
+set colored-completion-prefix on
+
+# Use the awesomest key bindings ever
+set editing-mode vi
+# OR...
+# set editing mode emacs
+
+# Simply use arrow keys to fuzzy-search history
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
+
+# Kick ass replacement for reverse history search
+"\C-r": 'hh\n' # https://github.com/dvorka/hstr
+
+# Automagically expand history abbreviataions like !-2
+" ": magic-space
+
+# Custom shortcut that runs without typing enter
+",aa": 'alias_append'
+
+# Quickly jump into the node repl
+",gn": 'node'
+set show-all-if-ambiguous on

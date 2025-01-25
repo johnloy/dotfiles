@@ -1,0 +1,109 @@
+[[snippets]]
+  description = "Print all bash shell options"
+  command = "shopt -p"
+  output = ""
+
+[[snippets]]
+  description = "Recursively delete .DS_Store files"
+  command = "find . -name '.DS_Store' -type f -delete"
+  output = ""
+
+[[snippets]]
+  description = "sudo killall -HUP mDNSResponder; sleep 2;"
+  command = "Clear DNS cache"
+  output = ""
+
+[[snippets]]
+  description = "Start vim with default settings and nocompatible"
+  command = "vim -u NONE -N"
+  output = ""
+
+[[snippets]]
+  description = "Set a bash option with shopt"
+  command = "shopt -s extglob"
+  output = ""
+
+[[snippets]]
+  description = "List standard I/O device files for stdin, stdout, stderr"
+  command = "lsof -a -p $$ -d0,1,2"
+  output = ""
+
+[[snippets]]
+  description = "echo terminal emulator type"
+  command = "echo $TERM"
+  output = ""
+
+[[snippets]]
+  description = "List bash builtins"
+  command = "compgen -b"
+  output = ""
+
+[[snippets]]
+  description = "Save to file list of tty processes with environment variables"
+  command = "ps -TE > ~/Desktop/ps-with-env.txt"
+  output = ""
+
+[[snippets]]
+  description = "Get battery capacity"
+  command = "ioreg -w 0 -f -r -c AppleSmartBattery | grep \"DesignCapacity\""
+  output = ""
+
+[[snippets]]
+  description = "Get Azure subscriptions"
+  command = "az account list"
+  output = ""
+
+[[snippets]]
+  description = "Rename master branch to main"
+  command = "git branch -m master main"
+  output = ""
+
+[[snippets]]
+  description = "Show git remote tracking branch"
+  command = "git status -sb"
+  output = ""
+
+[[snippets]]
+  description = "Print Unix timestamp as local ref822 datetime string"
+  command = "date -r <unix_timestamp=`date +%s`>"
+  output = ""
+
+[[snippets]]
+  description = "Print Unix timestamp as UTC ref822 datetime string"
+  command = "date -u -r <unix_timestamp=`date +%s`>"
+  output = ""
+
+[[snippets]]
+  description = "Print Unix timestamp"
+  command = "date +%s"
+  output = ""
+
+[[snippets]]
+  description = "Print HTTP response headers with curl"
+  command = "curl -s -o /dev/null -D - <url>"
+  output = ""
+
+[[snippets]]
+  description = "Print HTTP headers matching grep pattern using curl"
+  command = "curl -s <url> -I | grep -Fi <header=Content-Type>"
+  output = ""
+
+[[snippets]]
+  description = "Print HTTP request headers using curl"
+  command = "curl -vso /dev/null <url> 2>&1 | __char1='>' sed '/^[* {}<]/d; s/'$__char1' //;'"
+  output = ""
+
+[[snippets]]
+  description = "Count number of files in directory"
+  command = "find -type f | wc -l"
+  output = ""
+
+[[snippets]]
+  description = "List files changed since <sha>"
+  command = "git diff-tree --no-commit-id --name-only -r <sha=HEAD>"
+  output = ""
+
+[[snippets]]
+  description = "Delete my Arc preferences"
+  command = "curl -X DELETE --header 'Accept: */*' --header 'X-IDENTITY:  5098b9ec-40d9-453a-b35d-65f07ef2a6b6@identity' --header 'X-DWA-TOKEN: eyJ0eXAiOiJKV1MiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTExNjAxMzE5NDQsImlzcyI6ImF1dGhuLzIiLCJleHAiOjE2NTExNjM3MzE5NDQsIm5hbWUiOiJKb2huIExveSIsImlwIjoiMTkyLjE2OC4xODAuMjQwIiwiZG9tYWlucyI6W10sInN1YiI6ImpvaG4ubG95QGRyZWFtd29ya3MuY29tIiwiaWRlbnRpdHkiOiI1MDk4YjllYy00MGQ5LTQ1M2EtYjM1ZC02NWYwN2VmMmE2YjZAaWRlbnRpdHkiLCJjYXBhYmlsaXRpZXMiOltdfQ.Fh3N_JAeuf-gJmLXtFNFIn9z9gW6DoeboI0FPrvSZ-M' 'http://studio.svc.gld.dreamworks.net/pam/config/1/serve/pipeline/arc-1/sessions/5098b9ec-40d9-453a-b35d-65f07ef2a6b6@identity'"
+  output = ""

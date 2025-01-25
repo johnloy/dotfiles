@@ -1,0 +1,14 @@
+[General]
+  snippetfile = "~/.config/pet/snippet.toml"
+  editor = "nvim"
+  column = 40
+  selectcmd = "fzf"
+  backend = "gist"
+  sortby = ""
+
+[Gist]
+  file_name = "pet-snippet.toml"
+  access_token = ""
+  gist_id = "04fecae4b2b4d17a20e6b357602af3a5"
+  public = false
+  auto_sync = true

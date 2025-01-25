@@ -1,0 +1,12 @@
+export DOTFILES_DIR="${HOME}/.dotfiles"
+
+source ${DOTFILES_DIR}/sh/env.sh
+
+# Allow secrets to initialize themselves, because, well, they're secret
+[ -e ~/.secrets/profile.sh ] && source ~/.secrets/profile.sh
+
+source ${DOTFILES_DIR}/sh/functions.sh
+
+source ${DOTFILES_DIR}/sh/aliases.sh
+
+[ -e ~/.profile_local ] && source ~/.profile_local

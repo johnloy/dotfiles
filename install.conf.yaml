@@ -1,3 +1,32 @@
-- clean: []
-- link: {}
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- create:
+  - ~/.config
+  - ~/bin
+  - ~/.config/gh
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.hushlogin: hushlogin
+    ~/.inputrc: inputrc
+    ~/.config/:
+      glob: true
+      path: config/*
+      exclude: [ gh ]
+    ~/.config/gh/:
+      glob: true
+      path: config/gh/*
+    ~/.profile: sh/profile
+    ~/.bashrc: bash/bashrc
+    ~/.bash_profile: bash/bash_profile
+    ~/.bash_env: bash/bash_env
+    ~/.bash_logout: bash/bash_logout
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore: git/gitignore
+
 - shell: []
