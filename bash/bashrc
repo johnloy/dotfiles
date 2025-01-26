@@ -5,19 +5,13 @@ source "${DOTFILES_DIR}/bash/env.sh"
 source "${DOTFILES_DIR}/bash/functions.sh"
 source "${DOTFILES_DIR}/bash/aliases.sh"
 source "${DOTFILES_DIR}/bash/completions.sh"
-# source_many
-# source_many ~/.secrets/*.sh
-# source_many ~/bash/functions/*.sh
-# source_many ~/bash/aliases/*.sh
-# source_many ~/bash/interactive/*.sh
-
-# Completions
-# source_many ~/bash/completions/*.sh
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+eval "$(mise activate bash)"
+eval "$(starship init bash)"
 
 [ -s ~/.bashrc_local ] && source ~/.bashrc_local
 

@@ -1,3 +1,5 @@
+alias dotfiles-install="${HOME}/src/github.com/johnloy/dotfiles/install"
+
 # Alias Editing
 alias ae="vim ${HOME}/sh/aliases"           #alias edit
 alias ar='source ${ENV_DIR}/sh/aliases.zsh' #alias reload

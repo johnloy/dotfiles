@@ -9,12 +9,22 @@
 # /usr/local/Cellar/bash-completion@2/2.11/share/bash-completion/completions/
 #
 # File in bash_completion.d/ are no longer automatically sourced, so you need to explicitly source them.
+# if type brew &>/dev/null; then
+#   HOMEBREW_PREFIX="$(brew --prefix)"
+#   [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+#   for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*; do
+#     [[ -r "$COMPLETION" ]] && . "$COMPLETION"
+#   done
+# fi
 if type brew &>/dev/null; then
   HOMEBREW_PREFIX="$(brew --prefix)"
-  [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
-  for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*; do
-    [[ -r "$COMPLETION" ]] && . "$COMPLETION"
-  done
+  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+  else
+    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*; do
+      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+    done
+  fi
 fi
 
 docker_etc=/Applications/Docker.app/Contents/Resources/etc

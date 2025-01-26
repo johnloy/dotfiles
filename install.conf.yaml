@@ -4,8 +4,8 @@
       relink: true
 
 - create:
-  - ~/.config
-  - ~/bin
+    - ~/.config
+    - ~/bin
 
 - clean: ['~', '~/.config']
 
@@ -21,6 +21,9 @@
       glob: true
       create: false
       path: config/gh/*
+    ~/bin/:
+      glob: true
+      path: bin/*
     ~/.profile: sh/profile
     ~/.bashrc: bash/bashrc
     ~/.bash_profile: bash/bash_profile
@@ -29,5 +32,27 @@
     ~/.gitconfig: git/gitconfig
     ~/.gitignore: git/gitignore
     ~/.Brewfile: Brewfile
+    ~/.default-npm-packages: default-npm-packages
 
-- shell: []
+- shell:
+    - command: [git submodule update --init --recursive]
+      description: Installing/updating submodules
+      stdin: true
+      stdout: true
+      stderr: true
+    - command: [brew bundle --file=~/.Brewfile]
+      description: Installing Homebrew packages
+      stdin: true
+      stdout: true
+      stderr: true
+    - command: [npm-install-globally ~/.default-npm-packages]
+      description: Installing global npm packages
+      stdin: true
+      stdout: true
+      stderr: true
+    # - command: [gh auth login]
+    #   description: Authenticating with GitHub
+    #   if: '[ ! gh auth status > /dev/null 2>&1 ]'
+    #   stdin: true
+    #   stdout: true
+    #   stderr: true

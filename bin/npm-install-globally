@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Check if the file is provided as an argument
+if [ -z "$1" ]; then
+  echo "Usage: $0 <file_with_lines>"
+  exit 1
+fi
+
+# Initialize an empty string variable
+result=""
+
+# Read the file and concatenate each line with a space
+while IFS= read -r line; do
+  if [ -n "$line" ]; then
+    result+="$line "
+  fi
+done < "$1"
+
+# Trim the trailing space
+result=$(echo "$result" | sed 's/ $//')
+
+npm install -g $result
