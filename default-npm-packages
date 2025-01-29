@@ -1,3 +1,6 @@
 zx
-dotfiles-cli
 env-cmd
+@antfu/ni
+tsx
+svgo
+gltf-pipeline
