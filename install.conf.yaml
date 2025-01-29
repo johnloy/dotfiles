@@ -21,9 +21,9 @@
       glob: true
       create: false
       path: config/gh/*
-    ~/bin/:
-      glob: true
-      path: bin/*
+    ~/bin:
+      path: bin
+      force: true
     ~/.profile: sh/profile
     ~/.bashrc: bash/bashrc
     ~/.bash_profile: bash/bash_profile
