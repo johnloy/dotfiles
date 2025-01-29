@@ -4,3 +4,5 @@ env-cmd
 tsx
 svgo
 gltf-pipeline
+yarn
+pnpm
