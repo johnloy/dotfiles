@@ -1,0 +1,8 @@
+[tools]
+bun = "latest"
+deno = "latest"
+node = "lts"
+ruby = "3.2"
+
+[settings]
+idiomatic_version_file = true

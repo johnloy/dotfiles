@@ -50,6 +50,11 @@
       stdin: true
       stdout: true
       stderr: true
+    - command: [mise install]
+      description: Installing dev runtimes with mise
+      stdin: true
+      stdout: true
+      stderr: true
     # - command: [gh auth login]
     #   description: Authenticating with GitHub
     #   if: '[ ! gh auth status > /dev/null 2>&1 ]'
