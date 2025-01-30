@@ -68,6 +68,8 @@ brew "unbound"
 brew "usage"
 brew "yarn"
 brew "yq"
+
+cask "docker"
 cask "repoz"
 vscode "adpyke.vscode-sql-formatter"
 vscode "alefragnani.bookmarks"
