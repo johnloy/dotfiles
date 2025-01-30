@@ -33,6 +33,7 @@
     ~/.gitignore: git/gitignore
     ~/.Brewfile: Brewfile
     ~/.default-npm-packages: default-npm-packages
+    ~/.default-python-packages: default-python-packages
 
 - shell:
     - command: [git submodule update --init --recursive]
