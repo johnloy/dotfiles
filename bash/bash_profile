@@ -1,22 +1,10 @@
 # This file only gets run for login shells on OSX, but we want to use
 # an equivalent environment for login and interactive non-login shells
-#if [[ -e ~/.cache/my-env/bash/bashrc ]]; then
-#  source ~/.cache/my-env/bash/bashrc
-#elif [[ -e ~/.bashrc ]]; then
-#  ~/bin/items/cache-shell &
-#  source ~/.bashrc
-#fi
 source ~/.bashrc
-
-# Run these scripts only for login shells
-# source_many ~/bash/login/*.sh
-
-# test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/johnloy/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/johnloy/anaconda3/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
@@ -29,5 +17,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
-[ -e ~/.bas_profile_local ] && source ~/.bas_profile_local
+[ -e ~/.bash_profile_local ] && source ~/.bash_profile_local

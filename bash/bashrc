@@ -1,20 +1,15 @@
 # Common interactive profile for bash, zsh, ksh, and other bourne-derived shells
 [ -e ~/.profile ] && source ~/.profile
 
+# Ensure that the shims directory is in the PATH
+export PATH="${HOME}/.local/share/mise/shims:${PATH}"
+
 source "${DOTFILES_DIR}/bash/env.sh"
 source "${DOTFILES_DIR}/bash/functions.sh"
 source "${DOTFILES_DIR}/bash/aliases.sh"
 source "${DOTFILES_DIR}/bash/completions.sh"
 
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 eval "$(mise activate bash --shims)"
 eval "$(starship init bash)"
 
 [ -s ~/.bashrc_local ] && source ~/.bashrc_local
-
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
