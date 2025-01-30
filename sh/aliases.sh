@@ -1,4 +1,5 @@
 alias dotfiles-install="${HOME}/src/github.com/johnloy/dotfiles/install"
+alias dotfiles-edit="${EDITOR} ${HOME}/src/github.com/johnloy/dotfiles"
 
 # Alias Editing
 alias ae="vim ${HOME}/sh/aliases"           #alias edit
