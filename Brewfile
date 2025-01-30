@@ -72,73 +72,128 @@ brew "yq"
 
 cask "docker"
 cask "repoz"
-vscode "adpyke.vscode-sql-formatter"
+
+# AI Assistance
+# ==============
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "visualstudioexptteam.intellicode-api-usage-examples"
+vscode "visualstudioexptteam.vscodeintellicode"
+
+# Remote Development
+# ==================
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode.remote-explorer"
+vscode "ms-vscode.remote-repositories"
+
+# Docker
+# ======
+vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
+vscode "formulahendry.docker-explorer"
+vscode "ms-azuretools.vscode-docker"
+
+# DX and Productivity
+# ===================
+vscode "vscodevim.vim"
+vscode "vsls-contrib.codetour"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "adpyke.codesnap"
 vscode "alefragnani.bookmarks"
+vscode "brunnerh.insert-unicode"
+vscode "buenon.scratchpads"
+vscode "christian-kohler.path-intellisense"
+vscode "codespaces-contrib.codeswing"
+vscode "deerawan.vscode-dash"
+vscode "exodiusstudios.comment-anchors"
+vscode "gruntfuggly.todo-tree"
+vscode "wayou.vscode-todo-highlight"
+vscode "tyriar.lorem-ipsum"
+vscode "figma.figma-vscode-extension"
+vscode "humao.rest-client"
+vscode "hverlin.mise-vscode"
+
+# Git and Github
+# ==============
+vscode "eamodio.gitlens"
+vscode "donjayamanne.githistory"
+vscode "github.remotehub"
+vscode "github.vscode-pull-request-github"
+vscode "mhutchie.git-graph"
+vscode "rubbersheep.gi"
+vscode "vsls-contrib.gistfs"
+
+# Polyglot Tools
+# ==============
+vscode "esbenp.prettier-vscode"
+
+# JavaScript and TypeScript
+# =========================
+# vscode "ms-vscode.js-debug" # Node (installed by default)
+vscode "denoland.vscode-deno" # Deno
+vscode "oven.bun-vscode" # Bun
+vscode "christian-kohler.npm-intellisense"
+vscode "dbaeumer.vscode-eslint"
+vscode "mgmcdermott.vscode-language-babel"
+vscode "oouo-diogo-perdigao.docthis"
+vscode "pflannery.vscode-versionlens"
+vscode "steoates.autoimport"
+vscode "tobermory.es6-string-html"
+vscode "wix.vscode-import-cost"
+vscode "yoavbls.pretty-ts-errors"
+
+# HTML and XML
+vscode "redhat.vscode-xml"
+vscode "deque-systems.vscode-axe-linter"
+vscode "formulahendry.auto-rename-tag"
+vscode "dotjoshjohnson.xml"
+
+# CSS
+vscode "phoenisx.cssvar"
+vscode "tock.vscode-css-custom-properties"
+vscode "stylelint.vscode-stylelint"
+
+# SVG
+# ===
+vscode "jock.svg"
+vscode "sidthesloth.svg-snippets"
+
+# Frontend Framework Support
+# ==========================
+vscode "bradlc.vscode-tailwindcss"
+vscode "burkeholland.simple-react-snippets"
+vscode "runem.lit-plugin"
+vscode "styled-components.vscode-styled-components"
+vscode "vue.volar"
 vscode "astro-build.astro-vscode"
-vscode "be5invis.toml"
+
+# Frontend Dev and Testing
+# ========================
+vscode "ms-edgedevtools.vscode-edge-devtools"
+vscode "ms-playwright.playwright"
+vscode "nitayneeman.playwright-snippets"
+
+# Markdown
+# ========
 vscode "bierner.github-markdown-preview"
+vscode "DavidAnson.vscode-markdownlint"
 vscode "bierner.markdown-checkbox"
 vscode "bierner.markdown-emoji"
 vscode "bierner.markdown-footnotes"
 vscode "bierner.markdown-mermaid"
 vscode "bierner.markdown-preview-github-styles"
 vscode "bierner.markdown-yaml-preamble"
-vscode "bmewburn.vscode-intelephense-client"
-vscode "bradlc.vscode-tailwindcss"
-vscode "brunnerh.insert-unicode"
-vscode "buenon.scratchpads"
-vscode "burkeholland.simple-react-snippets"
-vscode "buster.ndjson-colorizer"
-vscode "cacher.cacher-vscode"
-vscode "christian-kohler.npm-intellisense"
-vscode "christian-kohler.path-intellisense"
-vscode "codespaces-contrib.codeswing"
-vscode "cssho.vscode-svgviewer"
-vscode "dbaeumer.vscode-eslint"
-vscode "deepakkamboj0121.vscode-playwright-test-snippets"
-vscode "deerawan.vscode-dash"
-vscode "deque-systems.vscode-axe-linter"
-vscode "devsense.composer-php-vscode"
-vscode "devsense.intelli-php-vscode"
-vscode "devsense.phptools-vscode"
-vscode "devsense.profiler-php-vscode"
-vscode "donjayamanne.githistory"
+vscode "svsool.markdown-memo"
+vscode "takumii.markdowntable"
+vscode "tchayen.markdown-links"
+vscode "yzhang.markdown-all-in-one"
+vscode "tomoyukim.vscode-mermaid-editor"
+
+# Python
+# ======
+vscode "ms-python.python"
 vscode "donjayamanne.python-environment-manager"
-vscode "dotjoshjohnson.xml"
-vscode "eamodio.gitlens"
-vscode "editorconfig.editorconfig"
-vscode "esbenp.prettier-vscode"
-vscode "exodiusstudios.comment-anchors"
-vscode "felipecaputo.git-project-manager"
-vscode "figma.figma-vscode-extension"
-vscode "flowtype.flow-for-vscode"
-vscode "formulahendry.auto-rename-tag"
-vscode "formulahendry.docker-explorer"
-vscode "foxundermoon.shell-format"
-vscode "github.copilot"
-vscode "github.copilot-chat"
-vscode "github.remotehub"
-vscode "github.vscode-pull-request-github"
-vscode "grapecity.gc-excelviewer"
-vscode "gruntfuggly.todo-tree"
-vscode "heigen007.http-requests-snippets-extension"
-vscode "humao.rest-client"
-vscode "idleberg.svg-icons"
-vscode "jock.svg"
-vscode "kbysiec.vscode-go-to-mdn"
-vscode "lgk.mavo-snippets"
-vscode "lkrms.inifmt"
-vscode "marp-team.marp-vscode"
-vscode "meshintelligenttechnologiesinc.pieces-vscode"
-vscode "mgmcdermott.vscode-language-babel"
-vscode "mhutchie.git-graph"
-vscode "mikestead.dotenv"
-vscode "ms-azuretools.vscode-azureappservice"
-vscode "ms-azuretools.vscode-azurefunctions"
-vscode "ms-azuretools.vscode-azureresourcegroups"
-vscode "ms-azuretools.vscode-docker"
-vscode "ms-edgedevtools.vscode-edge-devtools"
-vscode "ms-playwright.playwright"
 vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.python"
@@ -148,54 +203,52 @@ vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
 vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
-vscode "ms-vscode-remote.remote-containers"
-vscode "ms-vscode-remote.remote-ssh"
-vscode "ms-vscode-remote.remote-ssh-edit"
-vscode "ms-vscode.azure-account"
-vscode "ms-vscode.azure-repos"
-vscode "ms-vscode.azurecli"
-vscode "ms-vscode.remote-explorer"
-vscode "ms-vscode.remote-repositories"
-vscode "ms-vsliveshare.vsliveshare"
+
+# Java
+# ====
+vscode "oracle.oracle-java" # Java
+
+# C++
+# ===
+vscode "ms-vscode.cpptools" # C++
+
+# Go
+# ==
+vscode "golang.go" # Go
+
+# PHP
+# ===
+vscode "bmewburn.vscode-intelephense-client"
+vscode "xdebug.php-debug" # PHP
+vscode "devsense.intelli-php-vscode"
+vscode "devsense.phptools-vscode"
+vscode "devsense.profiler-php-vscode"
+
+# Ruby
+# ====
+vscode "shopify.ruby-lsp"
+
+# Rust
+# ====
+vscode "rust-lang.rust-analyzer"
+
+# Shell Scripting
+# ===============
+vscode "foxundermoon.shell-format"
+vscode "timonwong.shellcheck"
+
+# Databases and SQL
+# =================
+vscode "adpyke.vscode-sql-formatter"
 vscode "mtxr.sqltools"
-vscode "nitayneeman.playwright-snippets"
-vscode "octref.vscode-mavo"
-vscode "oouo-diogo-perdigao.docthis"
-vscode "pflannery.vscode-versionlens"
-vscode "phoenisx.cssvar"
-vscode "pwabuilder.pwa-studio"
-vscode "redhat.vscode-xml"
-vscode "roabramov.marks-to-outline"
-vscode "romanresh.testcafe-test-runner"
-vscode "ronnidc.nunjucks"
-vscode "rubbersheep.gi"
-vscode "runem.lit-plugin"
+
+# Miscellaneous language support
+# ==============================
+vscode "be5invis.toml"
+vscode "buster.ndjson-colorizer"
+vscode "editorconfig.editorconfig"
+vscode "lkrms.inifmt"
+vscode "mikestead.dotenv"
 vscode "sharat.vscode-brewfile"
-vscode "sidthesloth.svg-snippets"
-vscode "silesky.toggle-boolean"
-vscode "sissel.shopify-liquid"
-vscode "steoates.autoimport"
-vscode "styled-components.vscode-styled-components"
-vscode "stylelint.vscode-stylelint"
-vscode "svsool.markdown-memo"
-vscode "sysoev.language-stylus"
-vscode "takumii.markdowntable"
-vscode "tchayen.markdown-links"
-vscode "toba.vsfire"
-vscode "tobermory.es6-string-html"
-vscode "tock.vscode-css-custom-properties"
-vscode "tomoki1207.pdf"
-vscode "tomoyukim.vscode-mermaid-editor"
-vscode "tyriar.lorem-ipsum"
-vscode "visualstudioexptteam.intellicode-api-usage-examples"
-vscode "visualstudioexptteam.vscodeintellicode"
-vscode "vscodevim.vim"
-vscode "vsls-contrib.codetour"
-vscode "vsls-contrib.gistfs"
-vscode "vue.volar"
-vscode "vue.vscode-typescript-vue-plugin"
-vscode "wayou.vscode-todo-highlight"
-vscode "wix.vscode-import-cost"
-vscode "xabikos.javascriptsnippets"
-vscode "yoavbls.pretty-ts-errors"
-vscode "yzhang.markdown-all-in-one"
+vscode "tamasfe.even-better-toml"
+
