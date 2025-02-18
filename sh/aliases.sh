@@ -129,3 +129,6 @@ alias ls-repos-template='ls -1 ~/src/github.com/johnloy | grep "\-template"'
 alias ls-repos-play='ls -1 ~/src/github.com/johnloy | grep "\-play"'
 alias ls-repos-my='ls -1 ~/src/github.com/johnloy | grep "my\-"'
 alias ghh="open \`git remote -v | grep git@github.com | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/:/\//' -e 's/git@/http:\/\//'\`"
+
+
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"

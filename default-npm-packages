@@ -6,3 +6,4 @@ svgo
 gltf-pipeline
 yarn
 pnpm
+@antfu/ni

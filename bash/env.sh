@@ -31,11 +31,14 @@ HISTTIMEFORMAT='%F %T '
 
 
 # Synchronize histories between different shell sessions
-PROMPT_COMMAND='history -a ; history -n'
+# PROMPT_COMMAND='history -a ; history -n'
 
-JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home
+# Suppress the message on shell startup about zsh being macOS default
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 
 shopt -s cdspell
+
 CDPATH=.:~:~/src:~/src/github.com/johnloy
 
 export FZF_DEFAULT_COMMAND='ag -g .'

@@ -1,0 +1,1 @@
+[ -r "${HOME}/.zprofile_local" ] && . "${HOME}/.zprofile_local"

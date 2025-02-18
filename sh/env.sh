@@ -1,6 +1,28 @@
+# Use mise shims
+export PATH="${HOME}/.local/share/mise/shims:${PATH}"
+
+# Ensure user bins take precedence
 export PATH="${HOME}/bin:${PATH}"
 
-export MANPATH="${HOME}/.homebrew/share/man:${MANPATH}"
+case "$(uname)" in
+  Darwin)
+    OS="mac"
+    ;;
+  Linux)
+    OS="linux"
+    ;;
+  CYGWIN*|MINGW32*|MSYS*|MINGW*)
+    OS="win"
+    ;;
+  *)
+    OS="unknown"
+    ;;
+esac
+
+export OS
+
+
+# export MANPATH="${HOME}/.homebrew/share/man:${MANPATH}"
 
 # http://unix.stackexchange.com/questions/4859/visual-vs-editor-whats-the-difference
 export EDITOR='code'
@@ -10,9 +32,6 @@ export GREP_COLOR='1;33'
 
 # nvm is incompatible with PREFIX
 unset PREFIX
-
-# Suppress the message on shell startup about zsh being macOS default
-export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
 # https://wiki.archlinux.org/index.php/XDG_Base_Directory_support
@@ -42,3 +61,11 @@ XDG_DATA_DIRS=/usr/local/share:/usr/share
 
 # List of directories seperated by : (analogous to PATH).
 XDG_CONFIG_DIRS=/etc/xdg
+
+if [ -d "${HOME}/secrets.d" ]; then
+  for file in ${HOME}/secrets.d/*; do
+    [ -r "{$file}" ] && . "${file}"
+  done
+fi
+
+export STARSHIP_CONFIG="${HOME}/.config/starship/config.toml"

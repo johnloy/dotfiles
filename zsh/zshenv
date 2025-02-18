@@ -1,0 +1,5 @@
+if [ -r "${HOME}/.dotfile" ]; then
+  source "${ZDOTDIR}/path/to/your/file"
+fi
+
+ZDOTDIR="${HOME}"

@@ -1,15 +1,22 @@
-# Common interactive profile for bash, zsh, ksh, and other bourne-derived shells
-[ -e ~/.profile ] && source ~/.profile
+export DOTFILES_DIR="${HOME}/.dotfiles"
+export SH_CONFIG_DIR="${DOTFILES_DIR}/sh"
+export BASH_CONFIG_DIR="${DOTFILES_DIR}/bash"
 
-# Ensure that the shims directory is in the PATH
-export PATH="${HOME}/.local/share/mise/shims:${PATH}"
+. "${SH_CONFIG_DIR}/env.sh"
+. "${SH_CONFIG_DIR}/functions.sh"
+. "${SH_CONFIG_DIR}/aliases.sh"
 
-source "${DOTFILES_DIR}/bash/env.sh"
-source "${DOTFILES_DIR}/bash/functions.sh"
-source "${DOTFILES_DIR}/bash/aliases.sh"
-source "${DOTFILES_DIR}/bash/completions.sh"
-
+eval "$(brew shellenv)"
 eval "$(mise activate bash --shims)"
+
+export SHELDON_PROFILE="bash_${OS}"
+eval "$(sheldon -q source)"
+
 eval "$(starship init bash)"
 
-[ -s ~/.bashrc_local ] && source ~/.bashrc_local
+. "${BASH_CONFIG_DIR}/env.sh"
+. "${BASH_CONFIG_DIR}/functions.sh"
+. "${BASH_CONFIG_DIR}/aliases.sh"
+. "${BASH_CONFIG_DIR}/completion.sh"
+
+[ -r "${HOME}/.bashrc_local" ] && . "${HOME}/.bashrc_local"

@@ -2,6 +2,10 @@
     link:
       create: true
       relink: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
 
 - create:
     - ~/.config
@@ -27,8 +31,9 @@
     ~/.profile: sh/profile
     ~/.bashrc: bash/bashrc
     ~/.bash_profile: bash/bash_profile
-    ~/.bash_env: bash/bash_env
     ~/.bash_logout: bash/bash_logout
+    ~/.zshrc: zsh/zshrc
+    ~/.zprofile: zsh/zprofile
     ~/.gitconfig: git/gitconfig
     ~/.gitignore: git/gitignore
     ~/.Brewfile: Brewfile
@@ -38,24 +43,14 @@
 - shell:
     - command: [git submodule update --init --recursive]
       description: Installing/updating submodules
-      stdin: true
-      stdout: true
-      stderr: true
     - command: [brew bundle --file=~/.Brewfile]
       description: Installing Homebrew packages
-      stdin: true
-      stdout: true
-      stderr: true
-    - command: [npm-install-globally ~/.default-npm-packages]
-      description: Installing global npm packages
-      stdin: true
-      stdout: true
-      stderr: true
+    - command: [./zsh/fix-compinit.zsh]
+      description: Fixing zsh compinit
     - command: [mise install]
       description: Installing dev runtimes with mise
-      stdin: true
-      stdout: true
-      stderr: true
+    - command: [npm-install-globally ~/.default-npm-packages]
+      description: Installing global npm packages
     # - command: [gh auth login]
     #   description: Authenticating with GitHub
     #   if: '[ ! gh auth status > /dev/null 2>&1 ]'

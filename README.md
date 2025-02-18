@@ -1,5 +1,4 @@
-John Loy's dotfiles
-=================
+# John Loy's dotfiles
 
 This repo uses [dotbot](https://github.com/anishathalye/dotbot).
 
@@ -17,3 +16,19 @@ This repo uses [dotbot](https://github.com/anishathalye/dotbot).
   - git
 - Node and npm
   - asdf
+
+## Features
+
+zsh installed via Brew
+
+Environment variables set for scripts
+
+Aliases
+
+History
+File
+Size
+
+Path
+
+Prompt

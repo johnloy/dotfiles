@@ -1,0 +1,24 @@
+export DOTFILES_DIR="${HOME}/.dotfiles"
+export SH_CONFIG_DIR="${DOTFILES_DIR}/sh"
+export ZSH_CONFIG_DIR="${DOTFILES_DIR}/zsh"
+
+. "${SH_CONFIG_DIR}/env.sh"
+. "${SH_CONFIG_DIR}/functions.sh"
+. "${SH_CONFIG_DIR}/aliases.sh"
+
+eval "$(brew shellenv)"
+eval "$(mise activate zsh --shims)"
+
+export SHELDON_PROFILE="zsh_${OS}"
+eval "$(sheldon -q source)"
+
+# autoload run-help
+
+eval "$(starship init zsh)"
+
+. "${ZSH_CONFIG_DIR}/env.zsh"
+. "${ZSH_CONFIG_DIR}/functions.zsh"
+. "${ZSH_CONFIG_DIR}/aliases.zsh"
+. "${ZSH_CONFIG_DIR}/completion.zsh"
+
+[ -r "${HOME}/.zshrc_local" ] && . "${HOME}/.zshrc_local"

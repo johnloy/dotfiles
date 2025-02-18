@@ -1,3 +1,0 @@
-source ~/.profile
-source_many ~/bash/aliases/*.sh
-source_many ~/bash/functions/*.sh

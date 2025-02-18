@@ -1,0 +1,9 @@
+shell = "bash"
+
+[plugins.base16]
+github = "chriskempson/base16-shell"
+use = ["profile_helper.sh"]
+
+[plugins.my]
+local = "~/.dotfiles/sh/plugins/"
+use = ["*.sh"]
