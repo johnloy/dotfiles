@@ -41,19 +41,41 @@
     ~/.default-python-packages: default-python-packages
 
 - shell:
-    - command: [git submodule update --init --recursive]
-      description: Installing/updating submodules
-    - command: [brew bundle --file=~/.Brewfile]
-      description: Installing Homebrew packages
-    - command: [./zsh/fix-compinit.zsh]
-      description: Fixing zsh compinit
-    - command: [mise install]
-      description: Installing dev runtimes with mise
-    - command: [npm-install-globally ~/.default-npm-packages]
-      description: Installing global npm packages
+
+    - description: Installing/updating dotfiles git submodules
+      command: [git submodule update --init --recursive]
+
+    - description: Installing Homebrew
+      command:
+        - |
+          if ! command -v brew > /dev/null 2>&1; then
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          fi
+
+    - description: Installing Homebrew packages
+      command: [brew bundle --file=~/.Brewfile]
+
+    - description: Fixing zsh compinit
+      command: [./zsh/fix-compinit.zsh]
+
+    - description: Installing dev runtimes with mise
+      command: [mise install]
+
+    - description: Installing global npm packages
+      command: [npm-install-globally ~/.default-npm-packages]
+
+    - description: Changing default shell to zsh
+      command:
+        - |
+          if ! echo $SHELL | grep -qE "/zsh$"; then
+            sudo sh -c "echo $(which zsh) >> /etc/shells" &&
+            chsh -s $(which zsh)
+          else
+            echo "Shell is already set to zsh"
+          fi
+
+    # - command: [pip3 install --user -r ~/.default-python-packages]
+    #   description: Installing global Python packages
     # - command: [gh auth login]
     #   description: Authenticating with GitHub
     #   if: '[ ! gh auth status > /dev/null 2>&1 ]'
-    #   stdin: true
-    #   stdout: true
-    #   stderr: true

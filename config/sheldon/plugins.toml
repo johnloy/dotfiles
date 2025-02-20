@@ -4,6 +4,11 @@ shell = "bash"
 github = "chriskempson/base16-shell"
 use = ["profile_helper.sh"]
 
+[plugins.zhooks]
+github = "agkozak/zhooks"
+profiles = ["zsh_mac"]
+use = ["*.plugin.zsh"]
+
 [plugins.my]
 local = "~/.dotfiles/sh/plugins/"
 use = ["*.sh"]
